@@ -1,0 +1,10 @@
+.Container-box {
+  border: 5px dashed rgba(87, 56, 21);
+  width: 600px;
+  height: 600px;
+  padding: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
+}
