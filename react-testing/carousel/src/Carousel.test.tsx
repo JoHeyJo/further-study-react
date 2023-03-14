@@ -55,10 +55,10 @@ it("clicking on the left arrow.", function () {
 
   const rightArrow = container.querySelector(".fa-chevron-circle-right");
   const leftArrow = container.querySelector(".fa-chevron-circle-left");
-  
+
   //start on the second image
   fireEvent.click(rightArrow);
-  debug()
+  // debug()
   //move back to the first
   fireEvent.click(leftArrow);
   //expect the first image and not the second
@@ -68,3 +68,23 @@ it("clicking on the left arrow.", function () {
   ).not.toBeInTheDocument();
 
 })
+
+it('arrows are appropriately visable', function () {
+  const { container, debug } = render(<Carousel photos={test_photos} title={'testing images'} />)
+
+  const rightArrow = container.querySelector(".fa-chevron-circle-right");
+  const leftArrow = container.querySelector(".fa-chevron-circle-left");
+
+
+  // expect(rightArrow).toHaveProperty('visibility','hidden')
+  expect(getComputedStyle(leftArrow).visibility).toBe('hidden')
+  expect(getComputedStyle(rightArrow).visibility).toBe('visible')
+
+  fireEvent.click(rightArrow)
+  fireEvent.click(rightArrow)
+
+  expect(getComputedStyle(leftArrow).visibility).toBe('visible')
+  expect(getComputedStyle(rightArrow).visibility).toBe('hidden')
+
+})
+

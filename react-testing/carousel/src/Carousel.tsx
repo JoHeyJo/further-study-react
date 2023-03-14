@@ -23,8 +23,8 @@ function Carousel({ photos, title }: ICarousel) {
   const currCard: ICard = photos[currCardIdx];
   const total: number = photos.length;
 
-  const leftIconHidden = (currCardIdx === 0) ? "hidden" : "";
-  const rightIconHidden = (currCardIdx === total - 1) ? "hidden" : "";
+  // const leftIconHidden = (currCardIdx === 0) ? "hidden" : "";
+  // const rightIconHidden = (currCardIdx === total - 1) ? "hidden" : "";
 
   /** Decrements currCardIdx state by 1 */
   function prev() {
@@ -39,8 +39,8 @@ function Carousel({ photos, title }: ICarousel) {
       <h1>{title}</h1>
       <div className="Carousel-main">
         <i
-          hidden={true}
-          className={`fas fa-chevron-circle-left fa-2x ${leftIconHidden}`}
+          className="fas fa-chevron-circle-left fa-2x" 
+          style={{ visibility: currCardIdx === 0 ? "hidden" : 'visible' }}
           onClick={prev}
         />
         <Card
@@ -50,8 +50,9 @@ function Carousel({ photos, title }: ICarousel) {
           totalNum={total}
         />
         <i
-          className="fas fa-chevron-circle-right fa-2x hidden"
+          className="fas fa-chevron-circle-right fa-2x"
           onClick={next}
+          style={{ visibility: currCardIdx === total - 1 ? "hidden" : 'visible' }}
         />
       </div>
     </div>
