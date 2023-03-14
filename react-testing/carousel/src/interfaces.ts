@@ -1,13 +1,16 @@
-interface ICard {
+interface IC {
   caption: string;
   src: string;
-  currNum: number;
-  totalNum: number;
 }
 
 interface ICarousel {
-  photos: ICard[];
+  photos: IC[];
   title: string;
 }
 
-export type { ICard, ICarousel };
+interface ICard extends IC {
+  currNum?: number;
+  totalNum?: number;
+}
+
+export type { ICard, ICarousel, IC };

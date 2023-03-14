@@ -1,8 +1,9 @@
 import image1 from "./image1.jpg";
 import image2 from "./image2.jpg";
 import image3 from "./image3.jpg";
+import { IC } from './interfaces';
 
-const photos: object[] = [
+const photos: IC[] = [
   {
     src: image1,
     caption: "Photo by Richard Pasquarella on Unsplash"

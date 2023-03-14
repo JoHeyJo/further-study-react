@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ICarousel, ICard } from './interfaces';
 import Card from './Card'
+import './Carousel.css';
 
 
 /** Carousel: displays images and arrows to navigate through them 
@@ -22,6 +23,13 @@ function Carousel({ photos, title }: ICarousel) {
   const currCard: ICard = photos[currCardIdx];
   const total: number = photos.length;
 
+  const leftIconHidden = (currCardIdx === 0) ? "hidden" : "";
+  const rightIconHidden = (currCardIdx === total - 1) ? "hidden" : "";
+
+  /** Decrements currCardIdx state by 1 */
+  function prev() {
+    setCurrCardIdx(currCardIdx - 1);
+  }
   /** Increments currCardIdx state by 1 */
   function next() {
     setCurrCardIdx(currCardIdx + 1);
@@ -31,8 +39,9 @@ function Carousel({ photos, title }: ICarousel) {
       <h1>{title}</h1>
       <div className="Carousel-main">
         <i
-          className="fas fa-chevron-circle-left fa-2x"
-          onClick={next}
+          hidden={true}
+          className={`fas fa-chevron-circle-left fa-2x ${leftIconHidden}`}
+          onClick={prev}
         />
         <Card
           caption={currCard.caption}
@@ -41,7 +50,7 @@ function Carousel({ photos, title }: ICarousel) {
           totalNum={total}
         />
         <i
-          className="fas fa-chevron-circle-right fa-2x"
+          className="fas fa-chevron-circle-right fa-2x hidden"
           onClick={next}
         />
       </div>
