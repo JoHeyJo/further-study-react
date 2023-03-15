@@ -23,8 +23,6 @@ function Carousel({ photos, title }: ICarousel) {
   const currCard: ICard = photos[currCardIdx];
   const total: number = photos.length;
 
-  // const leftIconHidden = (currCardIdx === 0) ? "hidden" : "";
-  // const rightIconHidden = (currCardIdx === total - 1) ? "hidden" : "";
 
   /** Decrements currCardIdx state by 1 */
   function prev() {
