@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`match snapshot 1`] = `
+<div>
+  <div>
+    <div>
+      <img
+        alt=""
+        src=""
+        style="width: 300px;"
+      />
+    </div>
+    <p>
+      tails: 
+      0
+       heads 
+      0
+    </p>
+    <button>
+      Flip me
+    </button>
+  </div>
+</div>
+`;
