@@ -17,7 +17,7 @@ import { ICell } from './interfaces'
 
 function Cell({ flipCellsAroundMe, isLit }: ICell ) {
   const classes = `Cell ${isLit ? "Cell-lit" : ""}`;
-  return <td className={classes} onClick={flipCellsAroundMe} />;
+  return <td className={classes} onClick={()=>flipCellsAroundMe} />;
 }
 
 export default Cell;

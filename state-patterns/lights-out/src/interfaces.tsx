@@ -1,11 +1,11 @@
 interface IBoard {
   nrows: number;
   ncols: number;
-  chanceLightStartsOn: number;
+  chanceLightStartsOn: boolean;
 }
 
 interface ICell {
-  flipCellsAroundMe: () => [][];
+  flipCellsAroundMe: Function;
   isLit: boolean;
 }
 
