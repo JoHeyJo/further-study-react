@@ -32,7 +32,7 @@ function Board({ nrows, ncols, chanceLIghtStartsOn }: IBoard) {
     let initialBoard: [] = [];
     for (let i = 0; i < nrows; i++) {
       for (let j = 0; j < ncols; j++) {
-        // [...initialBoard, <Cell flipCellsAroundMe={flipCellsAround} isLit={chanceLIghtStartsOn} />]
+        [...initialBoard, <Cell flipCellsAroundMe={flipCellsAround} isLit={chanceLIghtStartsOn} />]
       }
     }
     return initialBoard;
@@ -50,11 +50,11 @@ function Board({ nrows, ncols, chanceLIghtStartsOn }: IBoard) {
 
       const flipCell = (y: number, x: number, boardCopy:boolean) => {
         // if this coord is actually on board, flip it
-
         if (x >= 0 && x < ncols && y >= 0 && y < nrows) {
           // boardCopy[y][x] = !boardCopy[y][x];
         }
       };
+      
       // TODO: Make a (deep) copy of the oldBoard
 
       // TODO: in the copy, flip this cell and the cells around it

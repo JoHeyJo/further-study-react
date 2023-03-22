@@ -7,6 +7,7 @@ A space to work on all the projects presented during bootcamp to 100% completion
   - some exceptions being projects that rely on Node.Js, that portion of the project will be done in Python but still made to similar specifications of the original lesson plan.
   -This repo does have some project that were completed in both React JS and React TS
   - Testing. Ideally to 100% if not possible at least maintain above 80%
+  - Styling will be used from template of exercise.
 
 This repo contains exercises designed to help bootcamp students understand and practice implementing the daily lessons during the React portion of the course. Some of the projects are full applications that can serve practical uses but by the nature of these being exercises to help grasp the subject matter, most of them are just toy programs that are fun to play around with.
 
